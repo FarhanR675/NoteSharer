@@ -18,4 +18,8 @@ public class AuthController {
     public User register(@RequestBody User user) {
         return userService.register(user);
     }
+
+    public String login(@RequestBody User user) {
+        return userService.login(user.getUsername(), user.getPassword());
+    }
 }
